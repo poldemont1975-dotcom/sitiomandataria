@@ -7,8 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
 
 <title>Fleitas Silvina | Mandataria Automotor</title>
-
-<meta name="description" content="Transferencias, informes y trámites automotor sin vueltas. Iniciá tu consulta en minutos.">
+<meta name="description" content="Transferencias, informes y trámites automotor sin vueltas. Consultá por WhatsApp en minutos.">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKTJH805B0"></script>
@@ -31,6 +30,8 @@ body{
   display:flex;
   flex-direction:column;
   min-height:100vh;
+  max-width:1100px;
+  margin:auto;
 }
 
 .hero-left{
@@ -46,7 +47,7 @@ body{
 }
 
 .logo-img{
-  width:160px;
+  width:150px;
   margin:0 auto 15px;
   display:block;
 }
@@ -60,58 +61,47 @@ body{
   color:#ddd;
 }
 
-/* BOTÓN PRINCIPAL */
-.cta{
+.cta, .btn-whatsapp, .btn-call{
   display:block;
-  margin-top:15px;
-  padding:14px;
-  border-radius:30px;
-  background:linear-gradient(135deg,#8c1c2c,#a32638);
-  color:white;
-  text-decoration:none;
-  font-weight:600;
   text-align:center;
+  border-radius:30px;
+  text-decoration:none;
 }
 
-/* WHATSAPP */
-.btn-whatsapp{
-  display:block;
+.cta{
+  margin-top:15px;
   padding:14px;
-  border-radius:30px;
+  background:linear-gradient(135deg,#8c1c2c,#a32638);
+  color:white;
+  font-weight:600;
+}
+
+.btn-whatsapp{
+  padding:14px;
   background:#25D366;
   color:white;
-  text-decoration:none;
   font-weight:bold;
-  text-align:center;
   margin-top:10px;
 }
 
-/* LLAMADA */
 .btn-call{
-  display:block;
   padding:12px;
-  border-radius:30px;
   background:#222;
   color:#ccc;
-  text-decoration:none;
-  text-align:center;
   margin-top:10px;
   font-size:0.9rem;
 }
 
-/* CONFIANZA */
 .trust{
   margin-top:15px;
   font-size:0.9rem;
   color:#ccc;
-  text-align:center;
 }
 
 .hero-right{
   padding:20px;
 }
 
-/* SERVICIOS */
 .services a{
   display:block;
   padding:14px;
@@ -128,6 +118,12 @@ body{
   color:#aaa;
   display:block;
 }
+
+@media(min-width:768px){
+  .hero{
+    flex-direction:row;
+  }
+}
 </style>
 </head>
 
@@ -139,7 +135,7 @@ body{
 
   <div class="hero-card">
 
-    <img src="./logo.jpg" class="logo-img" alt="Logo">
+    <img src="./logo.jpg" class="logo-img">
 
     <h1 class="brand">Fleitas Silvina</h1>
 
@@ -154,19 +150,16 @@ body{
 
     <a class="btn-whatsapp"
        href="https://wa.me/5491139253152?text=Hola,%20quiero%20hacer%20una%20consulta"
-       onclick="gtag('event','click_whatsapp',{event_category:'contacto'})"
        target="_blank">
        💬 Consultar por WhatsApp
     </a>
 
-    <a class="btn-call"
-       href="tel:+5491139253152"
-       onclick="gtag('event','click_llamada',{event_category:'contacto'})">
+    <a class="btn-call" href="tel:+5491139253152">
        📞 Llamar directamente
     </a>
 
     <div class="trust">
-      ✔ Respuesta en el día hábil<br>
+      ✔ Respuesta rápida<br>
       ✔ Atención personalizada<br>
       ✔ Trámites sin vueltas
     </div>
