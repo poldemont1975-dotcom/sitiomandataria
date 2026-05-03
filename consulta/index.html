@@ -22,21 +22,34 @@ body{
   background:#0b0b0b;
   color:white;
 }
+
 .container{
   max-width:520px;
   margin:auto;
   padding:40px 20px;
 }
+
+/* VOLVER */
+.back{
+  display:inline-block;
+  margin-bottom:20px;
+  color:#aaa;
+  text-decoration:none;
+  font-size:0.9rem;
+}
+
 form{
   display:flex;
   flex-direction:column;
   gap:12px;
 }
+
 input,textarea{
   padding:12px;
   border-radius:10px;
   border:none;
 }
+
 button{
   padding:14px;
   border-radius:30px;
@@ -51,12 +64,13 @@ button{
 
 <div class="container">
 
+<a href="/" class="back">← Volver al inicio</a>
+
 <h1>Iniciar consulta</h1>
 
 <form id="form">
 
 <input type="text" placeholder="Nombre" required>
-<input type="email" placeholder="Email" required>
 <input type="tel" placeholder="WhatsApp" required>
 <textarea placeholder="Consulta" required></textarea>
 
@@ -71,14 +85,12 @@ document.getElementById("form").addEventListener("submit", function(e){
   e.preventDefault();
 
   const nombre = document.querySelector('input[type="text"]').value;
-  const email = document.querySelector('input[type="email"]').value;
   const telefono = document.querySelector('input[type="tel"]').value;
   const mensaje = document.querySelector('textarea').value;
 
   const texto = `Hola, quiero hacer una consulta.
 
 Nombre: ${nombre}
-Email: ${email}
 WhatsApp: ${telefono}
 Consulta: ${mensaje}`;
 
