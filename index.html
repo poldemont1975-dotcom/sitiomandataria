@@ -50,14 +50,37 @@ body{margin:0;background:#000;color:#fff;font-family:system-ui,sans-serif;}
   font-weight:600;
 }
 
-.contact a{
+/* BOTONES OPTIMIZADOS */
+.btn-whatsapp{
   display:block;
-  margin-top:10px;
-  padding:12px;
-  background:rgba(255,255,255,0.06);
-  border-radius:12px;
-  color:#ddd;
+  padding:14px;
+  border-radius:30px;
+  background:#25D366;
+  color:white;
   text-decoration:none;
+  font-weight:bold;
+  text-align:center;
+  margin-top:10px;
+}
+
+.btn-call{
+  display:block;
+  padding:12px;
+  border-radius:30px;
+  background:#222;
+  color:#ccc;
+  text-decoration:none;
+  text-align:center;
+  margin-top:10px;
+  font-size:0.9rem;
+}
+
+/* PRUEBA SOCIAL */
+.trust{
+  margin-top:15px;
+  font-size:0.9rem;
+  color:#ccc;
+  text-align:left;
 }
 
 .hero-right{padding:20px;}
@@ -78,36 +101,14 @@ body{margin:0;background:#000;color:#fff;font-family:system-ui,sans-serif;}
   display:block;
 }
 
-.floating-whatsapp{
-  position:fixed;
-  bottom:10px;
-  left:10px;
-  right:10px;
-  padding:14px;
-  background:#8c1c2c;
-  color:#fff;
-  text-align:center;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
 @media(min-width:768px){
   .hero{flex-direction:row;}
-  .hero-left{padding:100px 80px;}
-  .floating-whatsapp{left:auto;right:20px;width:auto;}
+  .hero-left{padding:100px 80px;text-align:left;}
 }
 </style>
 </head>
 
 <body>
-
-<a class="floating-whatsapp"
-href="https://wa.me/5491139253152"
-onclick="if(typeof gtag==='function'){gtag('event','click_whatsapp',{event_category:'contacto'})}"
-target="_blank">
-Escribime por WhatsApp
-</a>
 
 <section class="hero">
 
@@ -115,7 +116,7 @@ Escribime por WhatsApp
 
   <div class="hero-card">
 
-    <img src="./logo.jpg" class="logo-img" alt="Logo">
+    <img src="./logo.jpg" class="logo-img">
 
     <h1 class="brand">Fleitas Silvina</h1>
 
@@ -124,15 +125,29 @@ Escribime por WhatsApp
       trámites claros, sin vueltas
     </p>
 
-    <a class="cta"
-       href="/consulta/"
-       onclick="if(typeof gtag==='function'){gtag('event','click_cta_consulta',{event_category:'cta'})}">
+    <a class="cta" href="/consulta/">
       Iniciar consulta
     </a>
 
-    <div class="contact">
-      <a href="tel:+5491139253152">📱 Teléfono directo</a>
-      <a href="mailto:silvinafleitas.mandataria@gmail.com">✉ Email</a>
+    <!-- BOTONES -->
+    <a class="btn-whatsapp"
+       href="https://wa.me/5491139253152?text=Hola,%20quiero%20hacer%20una%20consulta"
+       onclick="gtag('event','click_whatsapp',{event_category:'contacto'})"
+       target="_blank">
+       💬 Consultar ahora por WhatsApp
+    </a>
+
+    <a class="btn-call"
+       href="tel:+5491139253152"
+       onclick="gtag('event','click_llamada',{event_category:'contacto'})">
+       📞 Llamar directamente
+    </a>
+
+    <!-- PRUEBA SOCIAL -->
+    <div class="trust">
+      ✔ Respuesta en el día hábil<br>
+      ✔ Atención personalizada<br>
+      ✔ Trámites sin vueltas
     </div>
 
   </div>
