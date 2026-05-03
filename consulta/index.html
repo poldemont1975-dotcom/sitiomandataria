@@ -1,3 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Consulta | Fleitas Silvina</title>
+
+<!-- Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NKTJH805B0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NKTJH805B0');
+</script>
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui;
+  background:#0b0b0b;
+  color:white;
+}
+.container{
+  max-width:520px;
+  margin:auto;
+  padding:40px 20px;
+}
+form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+input,textarea{
+  padding:12px;
+  border-radius:10px;
+  border:none;
+}
+button{
+  padding:14px;
+  border-radius:30px;
+  background:#8c1c2c;
+  color:white;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Iniciar consulta</h1>
+
+<form id="form">
+
+<input type="text" placeholder="Nombre" required>
+<input type="email" placeholder="Email" required>
+<input type="tel" placeholder="WhatsApp" required>
+<textarea placeholder="Consulta" required></textarea>
+
+<button type="submit">Enviar consulta</button>
+
+</form>
+
+</div>
+
 <script>
 document.getElementById("form").addEventListener("submit", function(e){
   e.preventDefault();
@@ -14,13 +82,10 @@ Email: ${email}
 WhatsApp: ${telefono}
 Consulta: ${mensaje}`;
 
-  const textoCodificado = encodeURIComponent(texto);
-
-  const url = `https://wa.me/5491139253152?text=${textoCodificado}`;
+  const url = `https://wa.me/5491139253152?text=${encodeURIComponent(texto)}`;
 
   window.open(url, "_blank");
 
-  // Evento Analytics
   if (typeof gtag === "function") {
     gtag('event', 'generate_lead', {
       event_category: 'formulario',
@@ -29,3 +94,6 @@ Consulta: ${mensaje}`;
   }
 });
 </script>
+
+</body>
+</html>
