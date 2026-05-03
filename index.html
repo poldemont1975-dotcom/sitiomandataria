@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Consulta | Fleitas Silvina</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
 
-<meta name="description" content="Iniciá tu consulta de trámite automotor.">
+<title>Fleitas Silvina | Mandataria Automotor</title>
+
+<meta name="description" content="Transferencias, informes y trámites automotor sin vueltas. Iniciá tu consulta en minutos.">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKTJH805B0"></script>
@@ -18,121 +20,137 @@ gtag('config', 'G-NKTJH805B0');
 </script>
 
 <style>
-body{
-  margin:0;
-  font-family:system-ui,sans-serif;
-  background:#0b0b0b;
-  color:white;
+body{margin:0;background:#000;color:#fff;font-family:system-ui,sans-serif;}
+
+.hero{display:flex;flex-direction:column;min-height:100vh;}
+
+.hero-left{
+  flex:1;
+  padding:60px 20px;
+  background:radial-gradient(circle at 30% 50%, #8c1c2c, #2b0008 70%, #000);
+  text-align:center;
 }
 
-.container{
-  max-width:520px;
-  margin:auto;
-  padding:40px 20px;
-}
+.hero-card{max-width:420px;margin:auto;}
 
-h1{
-  margin-bottom:10px;
-}
+.logo-img{width:160px;margin:0 auto 15px;display:block;}
 
-p{
-  color:#bbb;
-}
+.brand{font-family:'Cormorant Garamond',serif;font-size:2.2rem;}
 
-form{
-  margin-top:20px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
+.subtitle{color:#ddd;}
 
-input, textarea{
-  padding:12px;
-  border-radius:10px;
-  border:none;
-  outline:none;
-}
-
-textarea{
-  min-height:100px;
-}
-
-button{
+.cta{
+  display:block;
+  margin-top:15px;
   padding:14px;
   border-radius:30px;
-  background:#8c1c2c;
+  background:linear-gradient(135deg,#8c1c2c,#a32638);
   color:white;
-  font-weight:bold;
-  cursor:pointer;
+  text-decoration:none;
+  font-weight:600;
 }
 
-.note{
-  font-size:0.8rem;
-  color:#888;
+.contact a{
+  display:block;
   margin-top:10px;
+  padding:12px;
+  background:rgba(255,255,255,0.06);
+  border-radius:12px;
+  color:#ddd;
+  text-decoration:none;
+}
+
+.hero-right{padding:20px;}
+
+.services a{
+  display:block;
+  padding:14px;
+  margin-bottom:10px;
+  background:#111;
+  border-radius:12px;
+  color:#eee;
+  text-decoration:none;
+}
+
+.services span{
+  font-size:0.8rem;
+  color:#aaa;
+  display:block;
+}
+
+.floating-whatsapp{
+  position:fixed;
+  bottom:10px;
+  left:10px;
+  right:10px;
+  padding:14px;
+  background:#8c1c2c;
+  color:#fff;
+  text-align:center;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+@media(min-width:768px){
+  .hero{flex-direction:row;}
+  .hero-left{padding:100px 80px;}
+  .floating-whatsapp{left:auto;right:20px;width:auto;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<a class="floating-whatsapp"
+href="https://wa.me/5491139253152"
+onclick="if(typeof gtag==='function'){gtag('event','click_whatsapp',{event_category:'contacto'})}"
+target="_blank">
+Escribime por WhatsApp
+</a>
 
-<h1>Iniciar consulta</h1>
+<section class="hero">
 
-<p>
-Completá el formulario y te respondemos en el día.
-</p>
+<div class="hero-left">
 
-<form id="form">
+  <div class="hero-card">
 
-<input type="text" placeholder="Nombre y apellido" required>
-<input type="email" placeholder="Email" required>
-<input type="tel" placeholder="WhatsApp" required>
-<textarea placeholder="Describí tu consulta" required></textarea>
+    <img src="./logo.jpg" class="logo-img" alt="Logo">
 
-<button type="submit">Enviar consulta</button>
+    <h1 class="brand">Fleitas Silvina</h1>
 
-</form>
+    <p class="subtitle">
+      Mandataria automotor<br>
+      trámites claros, sin vueltas
+    </p>
 
-<p class="note">
-También podés escribir directamente por WhatsApp.
-</p>
+    <a class="cta"
+       href="/consulta/"
+       onclick="if(typeof gtag==='function'){gtag('event','click_cta_consulta',{event_category:'cta'})}">
+      Iniciar consulta
+    </a>
+
+    <div class="contact">
+      <a href="tel:+5491139253152">📱 Teléfono directo</a>
+      <a href="mailto:silvinafleitas.mandataria@gmail.com">✉ Email</a>
+    </div>
+
+  </div>
 
 </div>
 
-<script>
-<script>
-document.getElementById("form").addEventListener("submit", function(e){
-  e.preventDefault();
+<div class="hero-right">
 
-  const nombre = document.querySelector('input[type="text"]').value;
-  const email = document.querySelector('input[type="email"]').value;
-  const telefono = document.querySelector('input[type="tel"]').value;
-  const mensaje = document.querySelector('textarea').value;
+  <div class="services">
+    <a href="/consulta/">Transferencias <span>Gestión completa</span></a>
+    <a href="/consulta/">Informes de dominio <span>Estado legal</span></a>
+    <a href="/consulta/">Inscripción 0km <span>Alta inicial</span></a>
+    <a href="/consulta/">Asesoramiento <span>Consulta personalizada</span></a>
+  </div>
 
-  const texto = `Hola, quiero hacer una consulta.
+</div>
 
-Nombre: ${nombre}
-Email: ${email}
-WhatsApp: ${telefono}
-Consulta: ${mensaje}`;
-
-  const textoCodificado = encodeURIComponent(texto);
-
-  const url = `https://wa.me/5491139253152?text=${textoCodificado}`;
-
-  window.open(url, "_blank");
-
-  // Evento Analytics
-  if (typeof gtag === "function") {
-    gtag('event', 'generate_lead', {
-      event_category: 'formulario',
-      event_label: 'consulta_whatsapp'
-    });
-  }
-});
-</script>
+</section>
 
 </body>
 </html>
