@@ -6,9 +6,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
 
-<title>Fleitas Silvina | Mandataria Automotor</title>
+<title>Fleitas Silvina | Gestoría del Automotor en San Miguel</title>
 
-<meta name="description" content="Transferencias, informes y trámites automotor sin vueltas. Iniciá tu consulta en minutos.">
+<meta name="description" content="Gestoría del automotor en San Miguel. Transferencias, informes de dominio e inscripción de vehículos. Atención en Trujui y alrededores.">
 <meta name="robots" content="index, follow">
 
 <!-- Google Analytics -->
@@ -57,8 +57,22 @@ body{
   font-size:2.2rem;
 }
 
-.subtitle{
+/* NUEVO: jerarquía clara SEO */
+.main-location{
+  font-size:1rem;
   color:#ddd;
+  margin-top:5px;
+}
+
+.subtitle{
+  color:#bbb;
+  margin-top:5px;
+}
+
+.sub-location{
+  font-size:0.85rem;
+  color:#999;
+  margin-top:5px;
 }
 
 .cta{
@@ -135,24 +149,31 @@ body{
 
   <div class="hero-card">
 
-    <!-- LOGO CORREGIDO -->
     <img src="/logo.jpg" class="logo-img" alt="Logo Fleitas Silvina">
 
     <h1 class="brand">Fleitas Silvina</h1>
 
-    <p class="subtitle">
-      Mandataria automotor<br>
-      trámites claros, sin vueltas
+    <!-- SEO FUERTE (esto es lo importante) -->
+    <p class="main-location">
+      Gestoría del automotor en San Miguel
     </p>
 
-    <!-- CTA -->
+    <!-- PROFESIONAL -->
+    <p class="subtitle">
+      Mandataria automotor · trámites DNRPA
+    </p>
+
+    <!-- UBICACIÓN REAL -->
+    <p class="sub-location">
+      Atención en Trujui y alrededores
+    </p>
+
     <a class="cta"
        href="/consulta/"
        onclick="gtag('event','click_cta_consulta',{event_category:'cta'})">
       Iniciar consulta
     </a>
 
-    <!-- WHATSAPP OPTIMIZADO -->
     <a class="btn-whatsapp"
        href="https://wa.me/5491139253152?text=Hola,%20quiero%20consultar%20por%20un%20trámite%20automotor"
        onclick="gtag('event','click_whatsapp',{event_category:'contacto'})"
@@ -161,7 +182,6 @@ body{
        💬 Consultar por WhatsApp
     </a>
 
-    <!-- LLAMADA -->
     <a class="btn-call"
        href="tel:+5491139253152"
        onclick="gtag('event','click_llamada',{event_category:'contacto'})">
